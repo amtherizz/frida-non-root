@@ -18,7 +18,7 @@ parser.add_argument('-o', '--out',required=True,help='Output APK name')
 parser.add_argument('-d', '--debug', action='store_true' ,default=False, required=False, help='debug mode')
 parser.add_argument('-ns', '--not-sign', action='store_true', default=False, required=False, help='Do not sign APK (if you want to sign by yourself)')
 parser.add_argument('-t', '--target-method',required=False,help='Specify a specific class and method (format class:method). Default is the LAUNCHER activity')
-parser.add_argument('-g', '--frida-gadget-version',required=False,help='The base filename of the frida gadgets to insert (e.g. res/frida-gadget-16.3.3-android-). Default is res/frida-gadget-16.3.3-android-', default='res/frida-gadget-16.3.3-android-')
+parser.add_argument('-g', '--frida-gadget-version',required=False,help='The base filename of the frida gadgets to insert (e.g. res/frida-gadget-16.3.3-android-). Default is res/frida-gadget-16.3.3-android-', default=r'res\frida-gadget-16.7.19-android-')
 parser.add_argument('-a', '--arch',required=False,default='all',choices= ['all','armeabi','armeabi-v7a','arm64-v8a','x86','x86_64'],help='Arch target (depends on device version)')
 
 args = vars(parser.parse_args())
